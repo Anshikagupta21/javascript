@@ -1,6 +1,15 @@
+//hosting
+
+// function ask(){
+//    console.log(a);
+//    var a=1;
+   
+//}
+
+
 //function anshika(){
     
-    // let b=6  ;
+    // let b=6;
     // let c=5;
 
    // console.log(b);
@@ -24,9 +33,9 @@
 
 
 //prompt ,alert and confirm
-//prompt gives space to write
-//alert gives ok button
-//confirm gives ok and cancel button
+//prompt gives space to write/ take input from user
+//alert gives ok button /display message
+//confirm gives ok and cancel button/ gives true and false value
 
 //function riya(){
     
@@ -40,7 +49,7 @@
 // function anshika(){
 
    
-//    var a = prompt('Entr your age:');
+//    var a = prompt('Enter your age:');
 //   (a>=18)? alert('You can vote'): alert('you can not vote');
    
 

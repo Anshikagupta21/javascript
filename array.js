@@ -32,7 +32,39 @@ let veg = ["tomato", "potato", "onion"];
 // fruits.unshift("Kiwi");
 // console.log(fruits)
 
- console.log(fruits.concat(num));
- console.log(fruits.concat(num,veg));
+ //console.log(fruits.concat(num));
+ //console.log(fruits.concat(num,veg));
 
 // console.log(fruits.toString());
+
+
+
+//********day2 of array ********
+
+
+//console.log(fruits.slice(1,3));
+
+//fruits.splice(1,0,"pineapple") //(1.where to add ,2.how many to delete ,3.what to add)
+//console.log(fruits);
+
+
+//to print an array into accending and decending order
+//let arr=[2,3,7,9,1,0]
+
+//console.log(arr.sort());
+
+//console.log(arr.sort().reverse());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
