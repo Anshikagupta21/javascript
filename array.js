@@ -1,7 +1,7 @@
 //Array - collect of similar or different types of data
-let fruits = ["Apple", "Mango","Banana", "Grapes"];
-let num = [1,2,3,4];
-let veg = ["tomato", "potato", "onion"];
+//let fruits = ["Apple", "Mango","Banana", "Grapes"];
+//let num = [1,2,3,4];
+//let veg = ["tomato", "potato", "onion"];
 //array methods
 // 1. Length - returns the number of elements in array.
 // 2. Push - adds an element in the end of array.
@@ -54,6 +54,28 @@ let veg = ["tomato", "potato", "onion"];
 //console.log(arr.sort());
 
 //console.log(arr.sort().reverse());
+
+function anshika(){
+    let ans=prompt("enter a number")
+    if(ans==2+6){
+        alert("true");
+
+    }
+    else{
+        alert("false");
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
