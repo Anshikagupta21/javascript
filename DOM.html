@@ -4,12 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="DOM.css">
+    <style>
+       #box{
+        height: 50vh;
+        width: 40%;
+        background-color:grey;
+        border: black;
+       }
+  .container{
+    width: 40%;
+    height: 40vh;
+    border-color: blue;
+    background-color: black;
+    background-image: url(./carimage.jpeg);
+}
+
+#smallbox{
+    display: flex;
+    padding-top: 4%;
+    gap: 50px;
+}
+
+.container1{
+    width: 10%;
+    height: 20vh;
+    border-color: black;
+
+background-image: url(./Bugatti-Divo.webp);
+
+}
+.container2{
+    width: 10%;
+    height: 20vh;
+    border-color: black;
+    
+    background-image:url(./Bugatti-Divo.webp);
+}
+.container3{
+    width: 10%;
+    height: 20vh;
+    border-color: black;
+    background-color: aqua;
+
+}
+
+    </style>
 </head>
 <body>
     
-    <p id="text">hello</p>
+     <p id="text">hello</p>
     
     <button onclick="okk()">click me</button>
-    <script src="DOM.js"></script>
+    <script src="DOM.js"></script> 
+
+    
+    <div id="box"></div>
+    <button onclick="Orange()" onmouseenter="Orange()">Orange</button>
+    <button onclick="Green()">Green</button>
+    <button onclick="white()">reset</button>
+
+
+
+        <div class="container"></div>
+        <div id="smallbox">
+        <div class="container1" onclick="box1()"></div>
+        <div class="container2" onclick="box2()"></div>
+        <div class="container3" onclick="box3()"></div>
+    </div>
+
+<p id="anshika">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<div>
+    <button onclick="pixel1()">30px</button>
+    <button onclick="pixel2()">50px</button>
+    <button onclick="pixel3()">70px</button>
+
+    <button onclick="sss()">hide</button>
+    <button onclick="hhh()">show</button>
+    
+
+
+</div>
+
+
+
 </body>
 </html>
