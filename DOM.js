@@ -177,6 +177,81 @@ let hhh=()=>{
 }
 
 
+//homework 
+
+
+let togglepara=()=> {
+ let para = document.querySelector(".mypara");
+ let button =document.querySelector("#togglebutton");
+   if (para.style.display === "none") {
+     para.style.display = "block";
+     button.textContent="hide"
+   } else {
+     para.style.display = "none";
+     button.textContent="show"
+   }
+ }
+
+
+
+// let count=0
+// let increase=()=>{
+//    let show=document.querySelector(".hello")
+ 
+// count+=1
+// show.innerHTML=count
+// }
+// let decrease=()=>{
+//    let show=document.querySelector(".hello")
+ 
+// count-=1
+// show.innerHTML=count
+// }
+
+// let zero=()=>{
+//    let show=document.querySelector(".hello")
+ 
+// count=0
+// show.innerHTML=count
+// }
+
+//another way 
+
+let count=0
+let increase=()=>{
+   let show=document.querySelector(".hello")
+ 
+count++
+show.innerHTML=count
+}
+
+
+let decrease=()=>{
+   let show=document.querySelector(".hello")
+   if(count>0){
+      count --;
+      show.innerHTML=count;
+      
+   }
+} 
+
+
+
+
+let zero=()=>{
+   let show=document.querySelector(".hello")
+  
+count=0
+show.innerHTML=count
+}
+
+
+let show=()=>{
+   let box=document.querySelector("#input").value
+   alert(box);
+
+   
+}
 //short cut
 //document.querySelector("#text").show.innerHTML="anshika"
 

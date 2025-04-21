@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        
+
+    </style>
+</head>
+<body> 
+    <table border="1" cellpadding="10px" cellspacing="10px" align="center">
+        <tr>
+            <th  colspan="4"  id="display"></th>
+        </tr>
+        <tr>
+            <td onclick="call('1')">1</td>
+            <td onclick="call('2')">2</td>
+            <td  onclick="call('3')">3</td> 
+            <td   onclick="call('4')">4</td>
+        </tr>
+
+        <tr>
+            <td onclick="call('5')">5</td>
+            <td onclick="call('6')">6</td>
+            <td onclick="call('7')">7</td>
+            <td onclick="call('8')">8</td>
+            <td onclick="call('9')">9</td>
+            <td onclick="call('00')">00</td>
+            <td onclick="call('.')">.</td>
+        </tr>
+        <tr>
+            <td onclick="call('+')" >+</td>
+            <td onclick="call('-')">-</td>
+            <td onclick="call('')"></td>
+            <td onclick="call('/')">/</td>
+        </tr>
+        <tr>
+            <td onclick="result()">=</td>
+            <td onclick="del()">Del</td>
+            <td onclick="allclear()">AC</td>
+
+        </tr>
+
+    </table>
+    <script>
+        let store=''
+
+
+let call=(value)=>{
+    let show=document.querySelector("#display")
+    store=store+value
+
+    show.innerHTML=store
+
+}
+
+let result=()=>{
+    let show=document.querySelector("#display")
+      store=eval(store)
+      store.toString()       //yeh num ko string m  convert krta he
+    show.innerHTML=store
+
+    
+}
+
+let del=()=>{
+    let show=document.querySelector("#display")
+    store=store.slice(0,-1)
+    show.innerHTML=store
+
+}
+
+let allclear=()=>{
+    let show=document.querySelector("#display")
+    
+    show.innerHTML=' '
+
+
+
+    
+}
+    </script>
+</body>
+</html>
