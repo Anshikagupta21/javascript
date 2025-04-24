@@ -16,26 +16,35 @@
 
 
 //clock
-setInterval(()=>{
-    let CurDate=new Date()
-let showtime=document.querySelector("#showing")
-showtime.innerHTML= `${CurDate.getHours()}: ${CurDate.getMinutes()}: ${CurDate.getSeconds()}`
-} ,1000)  
+
+// setInterval(()=>{
+//     let CurDate=new Date()
+// let showtime=document.querySelector("#showing")
+// showtime.innerHTML= `${CurDate.getHours()}: ${CurDate.getMinutes()}: ${CurDate.getSeconds()}`
+// } ,0)  
 
 //alarm
+let alarmInterval;
 let setAlarm=()=>{
     let userTime=document.querySelector("#usertime").value
-    let show=document.querySelector("#show")
+    let Show=document.querySelector("#show")
+    let audioSound=document.querySelector("#audio")
 
-    setInterval(()=>{
+    alarmInterval = setInterval(()=>{
         let Time=new Date()
         
-        let Alaramtime=`${Time.getHours()}:${Time.getMinutes()}`
+        let Alarmtime=`${Time.getHours().toString().padStart(2,"0")}:${Time.getMinutes()}`
         if(Alarmtime==userTime){
-            show.innerHTML="alarm is ringing"
+            Show.innerHTML="alarm is ringing"
+            audioSound.play()
+            setTimeout(()=>{
+                clearInterval(alarmInterval); //  Stop the interval after it rings
+            },5000)
+
         }
         else{
-            show.innerHTML="alaram is set"
+            Show.innerHTML="alaram is set"
+            
         }
 
     },1000)
@@ -43,6 +52,21 @@ let setAlarm=()=>{
     
 
 
+
+
+// let date= document.querySelector("#date");
+// let selectMenu= document.querySelectorAll("#select");
+// let stopAlarm = document.querySelector("#stopalarm");
+// let alarmList =document.querySelector("#alarmlist");
+
+// let stop=()=>{
+//     let userTime=document.querySelector("stopalarm").ariaValueMax
+//     setInterval(() => {
+//         let Time=new Date()
+        
+               
+//     }, 1000);
+// }
 
 
 

@@ -1,23 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alarm Clock</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(to right, #ffe29f, #ffa99f);
+      margin: 0;
+    }
+
+    .clock {
+      font-size: 60px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      background: #fff3e6;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    input[type="time"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ff914d;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e67e22;
+    }
+
+    #status {
+      font-size: 20px;
+      color: #222;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-    <script src="date.js"></script>
-    <p id="showing">Time</p>
 
+  <div class="clock" id="clock">00:00:00</div>
 
-    <input type="time" id="usertime">
-    <button onclick="setAlram()">Set Alaram</button>
-    <audio src=""></audio id="audio">
-        
-        
+  <div class="controls">
+    <input type="time" id="usertime" />
+    <button onclick="setAlarm()">Set Alarm</button>
+    <button onclick="stopAlarm()">Stop Alarm</button>
+    <p id="status">No alarm set.</p>
+  </div>
 
+  <audio id="audio" src="./alarm-327234 (1).mp3" preload="auto"></audio>
 
+  <script>
+    let alarmInterval;
+    let alarmTimeout;
 
+    // Live Clock Display
+    setInterval(() => {
+      const now = new Date();
+      const h = now.getHours().toString().padStart(2, '0');
+      const m = now.getMinutes().toString().padStart(2, '0');
+      const s = now.getSeconds().toString().padStart(2, '0');
+      document.getElementById("clock").innerText = `${h}:${m}:${s}`;
+    }, 1000);
 
+    function setAlarm() {
+      const userTime = document.getElementById("usertime").value;
+      const status = document.getElementById("status");
+      const audio = document.getElementById("audio");
+
+      if (!userTime) {
+        status.innerText = "Please select a time.";
+        return;
+      }
+
+      clearInterval(alarmInterval);
+      clearTimeout(alarmTimeout);
+
+      alarmInterval = setInterval(() => {
+        const now = new Date();
+        const currentTime = `${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}`;
+
+        if (currentTime === userTime) {
+          status.innerText = "⏰ Alarm is ringing!";
+          audio.play().catch(e => console.log("Audio play error:", e));
+
+          alarmTimeout = setTimeout(() => {
+            stopAlarm();
+          }, 5000);
+
+          clearInterval(alarmInterval);
+        } else {
+          status.innerText = "Alarm set for " + userTime;
+        }
+      }, 1000);
+    }
+
+    function stopAlarm() {
+      clearInterval(alarmInterval);
+      clearTimeout(alarmTimeout);
+
+      const audio = document.getElementById("audio");
+      audio.pause();
+      audio.currentTime = 0;
+
+      document.getElementById("status").innerText = "Alarm stopped.";
+    }
+  </script>
 </body>
 </html>
