@@ -11,8 +11,8 @@
 // console.log(MyDate.getTime());
 // console.log(MyDate.getMilliseconds());
 
-// let Days=["sunday","monday","tuesday","wednesday","thrusday","friday","saturday"];
-// console.log(Days[MyDate.getDay()]);
+ let Days=["sunday","monday","tuesday","wednesday","thrusday","friday","saturday"];
+ console.log(Days[MyDate.getDay()]);
 
 
 //clock

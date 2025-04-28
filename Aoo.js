@@ -1,5 +1,5 @@
-let Arr=["Apple",2,"banana"]  //array
-console.log(Arr[0]);
+// let Arr=["Apple",2,"banana"]  //array
+// console.log(Arr[0]);
 
 let fruits ={
     name:"anshika", //object
@@ -7,6 +7,7 @@ let fruits ={
     city:"bhopal"
 
 }
+console.log(fruits);
 
 //array of object
 let UserData=[
@@ -29,6 +30,7 @@ let UserData=[
     }
 ]
 console.log(UserData[0].city);
+
 let datashow = document.querySelector("#datashow")
 UserData.map( (e)=>{
     datashow.innerHTML+= `

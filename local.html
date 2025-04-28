@@ -4,12 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            
+        }
+        .container input{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+
+        }
+        
+    </style>
 </head>
 <body>
-    <input type="text" id="inp">
+    <!-- <input type="text" id="inp">
     <button onclick="sendData()">Send data</button>
     <button onclick="remove()">removeData</button>
-    <h1 id="show"></h1>
+    <h1 id="show"></h1> -->
+
+    <div class="container">
+        <input type="text" id="name" placeholder="Enter Name">
+        <input type="text" id="age" placeholder="Age">
+        <input type="text" id="email" placeholder="Email">
+        <input type="text" id="number" placeholder="Number">
+        <input type="password" id="pass" placeholder="Password">
+        <button onclick="saveData()">Submit</button>
+    </div>
+
     <script src="local.js"></script>
 </body>
 </html>

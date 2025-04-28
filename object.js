@@ -36,11 +36,11 @@
      
 
 //Destructuring of an object  
-      //   let student = {name:"anshika", age:20, city:"bhopal"};
-      //   let {name,age}= student;
+        let student = {name:"anshika", age:20, city:"bhopal"};
+        let {name,age}= student;
 
-      //   console.log(name);
-      //   console.log(age);
+        console.log(name);
+        console.log(age);
         
    //Spread operator
    
@@ -64,14 +64,14 @@
  // what is high order function and call back function
  // call back function=jo kisi ke para meter me pass kiya gya ho
 // higher order function= jo apne parameter me kisi function  ko leta ho(.map is higher order function)
-   let num=[2,3,6,4,8,9]
+  // let num=[2,3,6,4,8,9]
 
 //   let newarr= num.map( (e)=>{
 //       return e*2
 //   }  )
 //   console.log(newarr);
    
-//if is arrow funtion we can remove ' {} 'and 'return' if our code is of one line it is adventage id arrow function
+//if  it is arrow funtion we can remove ' {} 'and 'return' if our code is of one line it is adventage id arrow function
 
 
 //filter
@@ -89,8 +89,8 @@
 
 
 //foreach
-let newarr= num.forEach( (e)=>{
-      console.log(e*2==0);
+// let newarr= num.forEach( (e)=>{
+//       console.log(e*2==0);
       
-})
-console.log(newarr);
+// })
+// console.log(newarr);

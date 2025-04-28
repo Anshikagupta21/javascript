@@ -1,13 +1,13 @@
 
 
 //function anshika(){
-  //let num1=  parseInt(prompt ("enter number 1"))
-  //let num2= parseInt(prompt("enter number 2"))
+//   let num1=  parseInt(prompt ("enter number 1"))
+//   let num2= parseInt(prompt("enter number 2"))
 
- // let ans=num1+num2
+//  let ans=num1+num2
 
- // alert(ans) 
-  //or alert(num1+num2)
+//  alert(ans) 
+//  // or alert(num1+num2)
   // parseInt(), parsefloat() and Number to convert into number
   //number supports both decimal and number 
   
@@ -45,16 +45,9 @@
 // default:
 //     alert('invalid input')
 // }
-// }
+
 
 //using button tab to get an function aleryt prompt and confirm
-//function anshika(){
-
- //  alert('i am khushi');
-
-//}
-    
-
 
     //  let a= Number(prompt('what is price of an item'));
     //  let b= Number(confirm('do you have a discount'));
@@ -84,40 +77,40 @@
    // document.write(a1.toUpperCase())
    // document.write("<br>"+ a2.toLowerCase())
 
-    document.write(a2.concat(a1))
+    //document.write(a2.concat(a1))
 
    // document.write(a2.charAt(6))
    // document.write(a1.slice(2,5))
     
 
   //example of  replace 
-    //let c = "JavaScript and something something with javaScript"
+   // let c = "JavaScript and something something with javaScript"
 
     //document.write("<br>" + c );
-    //document.write("<br>" + c.replace("JavaScript","HTML") );
-    //document.write("<br>" + c.replaceAll("JavaScript","HTML") );
-    //document.write("<br>" + c.replace(/JavaScript/g,"HTML") );
-   //document.write("<br>" + c.replace(/JavaScript/gi,"HTML") );
+   // document.write("<br>" + c.replace("JavaScript","HTML") );
+  //  document.write("<br>" + c.replaceAll("JavaScript","HTML") );
+   // document.write("<br>" + c.replace(/JavaScript/g,"HTML") );
+  // document.write("<br>" + c.replace(/JavaScript/gi,"HTML") );
 
 
 // let a = "apple are very tasty than grape"
 // document.write(a.replace("grape" ,"orange"));
 
-    //  let arr=[1,2,3,4,5]
+//      let arr=[1,2,3,4,5]
     
-    // let spil ="conv-ert it into ar-ray"
+//     let spil ="conv-ert it into ar-ray"
 
-    //  console.log(spil.split("-"));
+//      console.log(spil.split("-"));
 
-   // alert(`hello i am "anshika" from 'bhopal'`)
-    //1.supports single cot and double cot
-   // 2.supports multiline link
-   // 3,we can also write html code  inside it
+//    alert(`hello i am "anshika" from 'bhopal'`)
+   // 1.supports single cot and double cot
+   //2.supports multiline link
+   //3.we can also write html code  inside it
 
 
 
-//    let name="anshika"
-//    let age= 20
+   let name="anshika"
+   let age= 20
 
-//    let a= `hello iam ${name} and i am ${age} years old` 
-// console.log(a);
+   let a= `hello iam ${name} and i am ${age} years old` 
+console.log(a);
